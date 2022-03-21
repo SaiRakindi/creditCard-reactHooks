@@ -85,7 +85,7 @@ export const Card = styled.div`
     border-radius: 42px;
     padding: 32px;
   }
-  
+
   @media screen and (min-width: 992px) {
     width: 475px;
     height: 325px;
