@@ -23,12 +23,14 @@ const CreditCard = () => {
   const [cardNumber, setCardNumber] = useState('')
   const [cardholderName, setCardholderName] = useState('')
 
+  const cardholderNameUpperCase = cardholderName.toUpperCase()
+
   const onChangeCardNumber = event => {
     setCardNumber(event.target.value)
   }
 
   const onChangeCardName = event => {
-    setCardholderName(event.target.value.toUpperCase())
+    setCardholderName(event.target.value)
   }
 
   return (
@@ -58,7 +60,7 @@ const CreditCard = () => {
 
           <PaymentMethodInput
             type="text"
-            value={cardholderName}
+            value={cardholderNameUpperCase}
             onChange={onChangeCardName}
             placeholder="Cardholder Name"
           />
